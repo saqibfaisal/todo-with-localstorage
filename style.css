@@ -1,0 +1,17 @@
+.form-control{
+    width: 170%;
+}
+.btn{
+    width: 120px;
+    height: 120px;
+    
+}
+body{
+    background-color: #3D9B85;
+}
+.jsBtn{
+    /* width: 70px; */
+    background-color: black;
+    color: white;
+
+}

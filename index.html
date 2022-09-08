@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo with LocalStorage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <main class="row">
+            <div class="col">
+                <table>
+                    <tr>
+                        <td class="input-group-text center" >FirstName</td>
+                        <td><input type="text"  name="firstname" id="firstname" class="form-control" ></td>
+                    </tr>
+                    <tr>
+                        <td class="input-group-text center">LastName</td>
+                        <td><input type="text" name="lastname" id="lastname" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td class="input-group-text center">Age</td>
+                        <td><input type="number" name="Age" id="age" class="form-control"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">
+                <button onclick="addHtmlTableRow()" class="btn btn-secondary btn-lg btn" id="Add">Add</button>
+                <button onclick="viewList()" class="btn btn-secondary btn-lg btn" id="updateBtn">view list</button>
+                <button onclick="update()" class="btn btn-secondary btn-lg btn" id="updateBtn">Update</button>
+            </div>
+        </main>
+    </main>
+</body>
+<script src="app.js"></script>
+<script>
+    let index = JSON.parse(localStorage.getItem("editData"));
+    if (index !== null) {
+        edit();
+    }
+</script>
+</html>
